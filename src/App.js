@@ -1,13 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/NavBar.js';
 import './App.css';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import Main from './components/main/Main';
 
-function App() {
+// rafce
+
+const App = () => {
   return (
     <div className="App">
-      <NavBar />
-      <h1>lighting .net</h1>
-      <h2>... la tienda digital que te ilumina...</h2>
+      <Header/>
+      <Main/>
+      <Footer/>
     </div>
   );
 }
