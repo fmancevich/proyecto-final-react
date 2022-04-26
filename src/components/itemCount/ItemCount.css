@@ -1,0 +1,22 @@
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonsQuantity {
+    display: flex;
+    border: solid 1px black;
+    background-color:lightgray;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.buttonSign:focus {
+    box-shadow: none !important;
+}
+
+.buttonSign:hover {
+    box-shadow: none !important;
+}
