@@ -7,6 +7,6 @@ const Main = () => {
         <ItemList texto="lighting .net ... la tienda digital que te ilumina..." />
     </div>
   )
-}
+};
 
 export default Main;

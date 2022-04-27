@@ -5,11 +5,10 @@ import CartWidget from '../cartWidget/CartWidget';
 const NavBar = () => {
   return (
     <div>
-        {/* <Navbar bg="light" expand="lg"> */}
         <Navbar bg="primary" variant="dark" expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
-                    <img alt="" src="/logo.png" width="30" height="30"
+                    <img alt="" src="./logo.png" width="30" height="30"
                          className="d-inline-block align-center" />
                     {' '}lighting .net
                 </Navbar.Brand>

@@ -8,9 +8,16 @@
     display: flex;
     border: solid 1px black;
     background-color:lightgray;
-    justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 5px auto;
+}
+
+.contador {
+    width: 15px;
+    font-weight: 500;
+    background-color:lightgray;
+    align-items: center;
+    margin: 5px auto;
 }
 
 .buttonSign:focus {
