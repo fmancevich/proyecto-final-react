@@ -4,17 +4,17 @@ import CartWidget from '../cartWidget/CartWidget';
 
 const NavBar = () => {
   return (
-    <div className='navBar'>
-        <Navbar bg="primary" variant="dark" expand="lg">
-            <Container>
+    <div className='navBar' >
+        <Navbar bg="primary" variant="dark" expand="lg" style={{ padding: "0px 10px", height: "80px" }} >
+            <Container fluid >
                 <Navbar.Brand href="#home">
-                    <img alt="" src="./logo.png" width="30" height="30"
+                    <img alt="" src="./logo.png" width="60" height="60"
                          className="d-inline-block align-center" />
-                    {' '}lighting .net
+                    &nbsp;&nbsp;&nbsp;lighting .net
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto" >
+                    <Nav className="me-auto position-absolute top-50 start-50 translate-middle" >
                         <Nav.Link href="#home">Home</Nav.Link>
                         <NavDropdown title="Productos" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#productos/lamparas">Lámparas</NavDropdown.Item>
@@ -26,7 +26,7 @@ const NavBar = () => {
                         <Nav.Link href="#nosotros">Sobre Nosotros</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                <CartWidget cantItems="3"/>
+                <CartWidget cantItems="0"/>
             </Container>
         </Navbar>
     </div>

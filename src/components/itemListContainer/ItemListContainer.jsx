@@ -24,7 +24,7 @@ const [productos, setProductos] = useState([]);
 
 // obtiene el json de productos de public/data usando axios
 const getProductos = async () => {
-  await axios.get('data/productos.json')
+  await axios.get('./data/productos.json')
     .then(response => {
       // console.log('response.data ==> ', response.data.productos)
       setProductos(response.data.productos);
