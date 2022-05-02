@@ -1,0 +1,281 @@
+{
+  "productos": [
+    {
+      "codigo": "3120",
+      "tipo": "Lámpara Bulbo",
+      "nombre": "Lámpara Bulbo 6w 3000K",
+      "descripcion": "Lámpara Bulbo 6w luz cálida equivalente a 40w lámpara común",
+      "cantidad": "20",
+      " precio ": " 67.52 ",
+      "imagen": "bulbo_3120.jpg"
+    },
+    {
+      "codigo": "3121",
+      "tipo": "Lámpara Bulbo",
+      "nombre": "Lámpara Bulbo 6w 6000K",
+      "descripcion": "Lámpara Bulbo 6w luz fría equivalente a 40w lámpara común",
+      "titulo": "Más vendido",
+      "cantidad": "20",
+      " precio ": " 67.52 ",
+      "imagen": "bulbo_3121.jpg"
+    },
+    {
+      "codigo": "3122",
+      "tipo": "Lámpara Bulbo",
+      "nombre": "Lámpara Bulbo 8w 3000K",
+      "descripcion": "Lámpara Bulbo 8w luz cálida equivalente a 60w lámpara común",
+      "cantidad": "20",
+      " precio ": " 72.21 ",
+      "imagen": "bulbo_3122.jpg"
+    },
+    {
+      "codigo": "3123",
+      "tipo": "Lámpara Bulbo",
+      "nombre": "Lámpara Bulbo 8w 6000K",
+      "descripcion": "Lámpara Bulbo 8w luz fría equivalente a 60w lámpara común",
+      "titulo": "Oferta!!!",
+      "cantidad": "20",
+      " precio ": " 72.21 ",
+      "imagen": "bulbo_3123.jpg"
+    },
+    {
+      "codigo": "3124",
+      "tipo": "Lámpara Bulbo",
+      "nombre": "Lámpara Bulbo 10w 3000K",
+      "descripcion": "Lámpara Bulbo 10w luz cálida equivalente a 75w lámpara común",
+      "cantidad": "20",
+      " precio ": " 75.02 ",
+      "imagen": "bulbo_3124.jpg"
+    },
+    {
+      "codigo": "3125",
+      "tipo": "Lámpara Bulbo",
+      "nombre": "Lámpara Bulbo 10w 6000K",
+      "descripcion": "Lámpara Bulbo 10w luz fría equivalente a 75w lámpara común",
+      "cantidad": "40",
+      " precio ": " 75.02 ",
+      "imagen": "bulbo_3125.jpg"
+    },
+    {
+      "codigo": "3126",
+      "tipo": "Lámpara Bulbo",
+      "nombre": "Lámpara Bulbo 12w 3000K",
+      "descripcion": "Lámpara Bulbo 12w luz cálida equivalente a 100w lámpara común",
+      "cantidad": "20",
+      " precio ": " 77.45 ",
+      "imagen": "bulbo_3126.jpg"
+    },
+    {
+      "codigo": "3127",
+      "tipo": "Lámpara Bulbo",
+      "nombre": "Lámpara Bulbo 12w 6000K",
+      "descripcion": "Lámpara Bulbo 12w luz fría equivalente a 100w lámpara común",
+      "cantidad": "20",
+      " precio ": " 77.45 ",
+      "imagen": "bulbo_3127.jpg"
+    },
+    {
+      "codigo": "3133",
+      "tipo": "Lámpara Bulbo",
+      "nombre": "Lámpara Bulbo 15w 6000K",
+      "descripcion": "Lámpara Bulbo 15w luz fría equivalente a 120w lámpara común",
+      "cantidad": "20",
+      " precio ": " 79.99 ",
+      "imagen": "bulbo_3133.jpg"
+    },
+    {
+      "codigo": "1043",
+      "tipo": "Lámpara Dicrocia",
+      "nombre": "Lámpara Dicroica 5w 38° 3000K",
+      "descripcion": "Lámpara Dicroica 5w iluminación hasta 38° luz cálida",
+      "cantidad": "10",
+      " precio ": " 103.15 ",
+      "imagen": "dicroica_1043.jpg"
+    },
+    {
+      "codigo": "1053",
+      "tipo": "Lámpara Dicrocia",
+      "nombre": "Lámpara Dicroica 7w 38° 3000K",
+      "descripcion": "Lámpara Dicroica 7w iluminación hasta 38° luz cálida",
+      "cantidad": "10",
+      " precio ": " 116.52 ",
+      "imagen": "dicroica_1054.jpg"
+    },
+    {
+      "codigo": "1142B",
+      "tipo": "Lámpara Dicrocia",
+      "nombre": "Lámpara Dicroica 5w 38° Blister 6000K",
+      "descripcion": "Lámpara Dicroica 5w iluminación hasta en Blister luz fría",
+      "cantidad": "10",
+      " precio ": " 103.15 ",
+      "imagen": "dicroica_1142B.jpg"
+    },
+    {
+      "codigo": "3029",
+      "tipo": "Lámpara Globo",
+      "nombre": "Lámpara Globo 12w 6000K",
+      "descripcion": "Lámpara Globo 12w luz fría",
+      "titulo": "Oferta!!!",
+      "cantidad": "5",
+      " precio ": " 467.00 ",
+      "imagen": "globo_3029.jpg"
+    },
+    {
+      "codigo": "3260",
+      "tipo": "Lámpara Gota",
+      "nombre": "Lámpara Gota 7w 3000K",
+      "descripcion": "Lámpara Gota 7w rosca E27 luz cálida",
+      "cantidad": "10",
+      " precio ": " 97.53 ",
+      "imagen": "gota_3260.jpg"
+    },
+    {
+      "codigo": "3424",
+      "tipo": "Lámpara Perfume",
+      "nombre": "Lámpara Perfume 1,7w 3000K",
+      "descripcion": "Lámpara Perfume 1,7w rosca E14 luz cálida",
+      "cantidad": "5",
+      " precio ": " 163.16 ",
+      "imagen": "perfume_3424.jpg"
+    },
+    {
+      "codigo": "3611",
+      "tipo": "Lámpara Serie T",
+      "nombre": "Lámpara Serie T 25w 6000K",
+      "descripcion": "Lámpara Serie T 25w E27 Termoplastico-Aluminio luz fría",
+      "titulo": "Oferta!!!",
+      "cantidad": "10",
+      " precio ": " 243.82 ",
+      "imagen": "serie_t_3611.jpg"
+    },
+    {
+      "codigo": "3613",
+      "tipo": "Lámpara Serie T",
+      "nombre": "Lámpara Serie T 35w 6000K",
+      "descripcion": "Lámpara Serie T 35w E27/E40 Termoplastico-Aluminio  luz fría",
+      "cantidad": "10",
+      " precio ": " 376.53 ",
+      "imagen": "serie_t_3613.jpg"
+    },
+    {
+      "codigo": "3615",
+      "tipo": "Lámpara Serie T",
+      "nombre": "Lámpara Serie T 45w 6000K",
+      "descripcion": "Lámpara Serie T 45w E27/E40 Termoplastico-Aluminio  luz fría",
+      "cantidad": "10",
+      " precio ": " 517.64 ",
+      "imagen": "serie_t_3615.jpg"
+    },
+    {
+      "codigo": "4503",
+      "tipo": "Tortuga",
+      "nombre": "Tortuga 12w ovalada blanca 3000K",
+      "descripcion": "Tortuga 12w ovalada blanca, medidas 20,0 x 9,8 x 4,5 cm luz cálida",
+      "titulo": "Bajo de precio!!!",
+      "cantidad": "5",
+      " precio ": " 693.78 ",
+      "imagen": "tortuga_4503.jpg"
+    },
+    {
+      "codigo": "4507",
+      "tipo": "Tortuga",
+      "nombre": "Tortuga 18w ovalada blanca 3000K",
+      "descripcion": "Tortuga 18w ovalada blanca, medidas 23,0 x 10,5 x 2,5 cm luz cálida",
+      "cantidad": "5",
+      " precio ": " 882.67 ",
+      "imagen": "tortuga_4507.jpg"
+    },
+    {
+      "codigo": "5703",
+      "tipo": "Luminaria embutir",
+      "nombre": "Luminaria 12w redonda embutir 3000K",
+      "descripcion": "Luminaria 12w redonda embutir luz cálida",
+      "cantidad": "5",
+      " precio ": " 518.36 ",
+      "imagen": "luminaria_redonda_5703.jpg"
+    },
+    {
+      "codigo": "5705",
+      "tipo": "Luminaria embutir",
+      "nombre": "Luminaria 12w redonda embutir 6000K",
+      "descripcion": "Luminaria 12w redonda embutir luz fría",
+      "cantidad": "5",
+      " precio ": " 518.36 ",
+      "imagen": "luminaria_redonda_5705.jpg"
+    },
+    {
+      "codigo": "5808",
+      "tipo": "Luminaria aplicar",
+      "nombre": "Luminaria 18w redonda aplicar 3000K",
+      "descripcion": "Luminaria 18w redonda aplicar luz cálida",
+      "cantidad": "5",
+      " precio ": " 817.46 ",
+      "imagen": "luminaria_redonda_5806.jpg"
+    },
+    {
+      "codigo": "5852",
+      "tipo": "Luminaria aplicar",
+      "nombre": "Luminaria 6w cuadrada aplicar 6000K",
+      "descripcion": "Luminaria 6w cuadrada aplicar luz fría",
+      "titulo": "Bajo de precio!!!",
+      "cantidad": "5",
+      " precio ": " 492.49 ",
+      "imagen": "luminaria_cuadrada_5852.jpg"
+    },
+    {
+      "codigo": "5856",
+      "tipo": "Luminaria aplicar",
+      "nombre": "Luminaria 18w cuadrada aplicar 3000K",
+      "descripcion": "Luminaria 18w cuadrada aplicar luz cálida",
+      "cantidad": "5",
+      " precio ": " 817.46 ",
+      "imagen": "luminaria_cuadrada_5856.jpg"
+    },
+    {
+      "codigo": "5858",
+      "tipo": "Luminaria aplicar",
+      "nombre": "Luminaria 18w cuadrada aplicar 6000K",
+      "descripcion": "Luminaria 18w cuadrada aplicar luz fría",
+      "cantidad": "5",
+      " precio ": " 817.46 ",
+      "imagen": "luminaria_cuadrada_5858.jpg"
+    },
+    {
+      "codigo": "5861",
+      "tipo": "Luminaria aplicar",
+      "nombre": "Luminaria 24w cuadrada aplicar 6000K",
+      "descripcion": "Luminaria 24w cuadrada aplicar luz fría",
+      "cantidad": "5",
+      " precio ": " 1,246.99 ",
+      "imagen": "luminaria_cuadrada_5861.jpg"
+    },
+    {
+      "codigo": "7603",
+      "tipo": "Proyector",
+      "nombre": "Proyector 10w 6000K",
+      "descripcion": "Proyector 10w Prolite luz fría",
+      "titulo": "Ofertón!!!",
+      "cantidad": "5",
+      " precio ": " 492.49 ",
+      "imagen": "proyector_6603.jpg"
+    },
+    {
+      "codigo": "2501",
+      "tipo": "Luminaria emergencia",
+      "nombre": "Luminaria de emergencia de 30 leds",
+      "descripcion": "Luminaria de emergencia de 30 leds 25 cm luz fría",
+      "cantidad": "2",
+      " precio ": " 1,341.44 ",
+      "imagen": "emergencia_2501.jpg"
+    },
+    {
+      "codigo": "2503",
+      "tipo": "Luminaria emergencia",
+      "nombre": "Luminaria de emergencia de 90 leds",
+      "descripcion": "Luminaria de emergencia de 90 leds 52 cm luz fría",
+      "cantidad": "2",
+      " precio ": " 2,372.54 ",
+      "imagen": "emergencia_2503.jpg"
+    }
+  ]
+}

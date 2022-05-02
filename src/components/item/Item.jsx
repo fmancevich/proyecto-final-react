@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { BsFillCartPlusFill } from 'react-icons/bs';
 import ItemCount from '../itemCount/ItemCount'
 
-const Item = ({ header, nombre, descripcion }) => {
+const Item = ({ index, nombre, descripcion, titulo, imagen, stock }) => {
 
-  const handleOnAdd = (cantidad) => {
-    console.log(`${cantidad} items agregados al carrito`);
+  // console.log(nombre, descripcion, titulo, imagen, stock)
+  const [itemsCarrito, setItemsCarrito] = useState(0);
+
+  const onAdd = (cantidad) => {
+    // console.log(`ItemCount ${index} tiene ${cantidad} items`);
+    setItemsCarrito(cantidad);
+  };
+
+  const handleOnAdd = (itemsCarrito) => {
+    console.log(`Se agregaron ${JSON.stringify(itemsCarrito)} items del producto ${index} al carrito`);
   };
 
   return (
-    <div style={{ display: "block", padding: 30, alignItems: "center" }}>
-      <Card className="text-center w-100" border="info">
-        <Card.Header>{header}</Card.Header>
-        <Card.Img variant="top" src="./led-bulb.jpg" style={{ padding: 20 }} />        
+    <div className="item" style={{ display: "block", padding: 30, alignItems: "center" }}>
+      <Card className="text-center w-100" border="info" >
+        <Card.Header style={{ fontWeight: 500 }}>{nombre}</Card.Header>
+        <Card.Img variant="top" src={imagen} style={{ padding: 20 }} />        
         <Card.Body>
-          <Card.Title>{nombre}</Card.Title>
-          <Card.Text>{descripcion}</Card.Text>
-          <ItemCount stock={10} initial={1} onAdd={handleOnAdd} />
+          <Card.Text style={{ height: "3rem" }}>{descripcion}</Card.Text>
+          <ItemCount initial={1} stock={stock} onAdd={onAdd} />
         </Card.Body>
         <Card.Footer className="text-muted">
-          <Button variant="primary"><BsFillCartPlusFill /> Agregar al carrito</Button>
+          <Button variant="primary" onClick={() => handleOnAdd(itemsCarrito)}><BsFillCartPlusFill /> Agregar al carrito</Button>
         </Card.Footer>
       </Card>    
     </div>

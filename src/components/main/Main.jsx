@@ -1,10 +1,10 @@
 import React from 'react';
-import ItemList from '../itemList/ItemList';
+import ItemListContainer from './../itemListContainer/ItemListContainer';
 
 const Main = () => {
   return (
-    <div>
-        <ItemList texto="lighting .net ... la tienda digital que te ilumina..." />
+    <div className='main'>
+        <ItemListContainer texto="lighting .net ... la tienda digital que te ilumina..." />
     </div>
   )
 };
