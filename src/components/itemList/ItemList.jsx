@@ -14,18 +14,11 @@ const ItemList = ( {productos} ) => {
           { productos.length > 0 ? (
               productos.map((producto, index) => (
                 <Col lg={4} sm={6} xs={12} key={index} >
-                  <Item index={index}
-                        producto={producto}
-                        // nombre={producto.nombre === undefined ? `${blank}` : producto.nombre } 
-                        // descripcion={producto.descripcion} 
-                        // titulo={producto.titulo} 
-                        // imagen={'images/' + ( producto.imagen === undefined ? 'imgen_no_disponible.jpg' : producto.imagen) } 
-                        // stock={producto.cantidad} 
-                  />
+                  <Item index={index} producto={producto} />
                 </Col>
               ))
           ) : (
-            <h1>Cargando...</h1>
+            <h1 style={{ padding: "30px 0px"}}>Cargando...</h1>
           )}
         </Row>
       </Container>

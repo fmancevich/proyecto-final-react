@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import ItemList from '../itemList/ItemList';
 import axios from 'axios';
 
-const ItemListContainer = ( {texto} ) => {
+const ItemListContainer = ( {titulo, tipo} ) => {
 
   const [productos, setProductos] = useState([]);
 
@@ -22,24 +22,52 @@ const ItemListContainer = ( {texto} ) => {
   //   .catch(error => console.error(error));
   // }
 
-  // obtiene el json de productos de public/data usando axios
-  const getProductos = async () => {
-    await axios.get('./data/productos.json')
-      .then(response => {
-        // console.log('response.data ==> ', response.data.productos)
-        setProductos(response.data.productos);
-      })
-      .catch(error => console.error(error));
-  }
+  // // obtiene el json de productos de public/data usando axios y then / catch
+  // const getProductos = async () => {
+  //   await axios.get('./data/productos.json')
+  //     .then(response => {
+  //       // console.log('response.data ==> ', response.data.productos)
+  //       setProductos(response.data.productos);
+  //     })
+  //     .catch(error => console.error(error));
+  // }
 
+  // obtiene el json de productos de public/data usando axios y try catch
+  const getProductos = async () => {
+    try {
+      const response = await axios.get('/data/productos.json')
+      // console.log('response.data.productos ==> ', response.data.productos)
+
+      console.log(`tipo ==> ${tipo}`)
+
+      if (tipo === undefined) {           // no hay filtro
+        setProductos(response.data.productos);
+      } else {                           // filtra por tipo
+        setProductos(response.data.productos.filter(item => item.tipo === tipo));
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  // obtiene lista de productos simulando que tarda 3 segundos
   useEffect(() => {
-    getProductos()        // obtiene lista de productos
+    setTimeout(getProductos, 1000);  
   }, [])  
 
   return (
     <div className='itemListContainer'>
-      <h1 style={{ padding: (0, 20) }} >{texto}</h1>
-      <h3 className='subtitulo'>Productos</h3> 
+      <h1 style={{ padding: (0, 20) }} >{titulo}</h1>
+      <h3 className='subtitulo'>
+          {
+            {
+              'lampara': 'Lámparas',
+              'luminaria': 'Luminarias',                                                    
+              'proyector': 'Proyectores',
+              undefined: 'Todos los Productos'
+            } [tipo]
+          }
+      </h3> 
       <ItemList productos={productos} />
     </div>
   )

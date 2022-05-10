@@ -1,48 +1,34 @@
-import React, { useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
-import { BsFillCartPlusFill } from 'react-icons/bs';
-import ItemCount from '../itemCount/ItemCount'
-import ItemDetailContainer from '../itemDetailCointainer/ItemDetailCointainer';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Item = ({ index, producto }) => {
+const Item = ({ producto }) => {
 
   const blank = '\u00A0';
-
-  // console.log(nombre, descripcion, titulo, imagen, stock)
-  const [itemsCarrito, setItemsCarrito] = useState(0);
 
   let nombre = producto.nombre === undefined ? `${blank}` : producto.nombre 
   let descripcion = producto.descripcion;
   // let titulo = producto.titulo; 
-  let imagen = 'images/' + ( producto.imagen === undefined ? 'imgen_no_disponible.jpg' : producto.imagen);
-  let stock = producto.cantidad;
-
-  const onAdd = (cantidad) => {
-    // console.log(`ItemCount ${index} tiene ${cantidad} items`);
-    setItemsCarrito(cantidad);
-  };
-
-  const handleOnAdd = (itemsCarrito) => {
-    console.log(`Se agregaron ${JSON.stringify(itemsCarrito)} items del producto ${index} al carrito`);
-  };
+  let imagen = '/images/' + ( producto.imagen === undefined ? 'imagen_no_disponible.jpg' : producto.imagen);
+  // let stock = producto.cantidad;
 
   return (
     <div className="item" style={{ display: "block", padding: 30, alignItems: "center" }}>
-      <Card className="text-center w-100" border="info" >
-        <Card.Header style={{ fontWeight: 500 }}>
+      <div className="card text-center w-100" border="info" >
+        <div className="card-header" style={{ fontWeight: 500 }}>
             {nombre}
-        </Card.Header>
-        <Card.Img variant="top" src={imagen} style={{ padding: 20 }} />        
-        <Card.Body>
-          <Card.Text style={{ height: "3rem" }}>{descripcion}</Card.Text>
-          <ItemCount initial={1} stock={stock} onAdd={onAdd} />
-        </Card.Body>
-        <Card.Footer className="text-muted">
-          {/* <Button variant="primary" onClick={() => handleOnAdd(itemsCarrito)}><BsFillCartPlusFill /> Agregar al carrito</Button> */}
-          <ItemDetailContainer index={index} producto={producto} />
-        </Card.Footer> 
-      </Card> 
-
+        </div>
+        <img variant="top" src={imagen} style={{ padding: 20 }} />        
+        <div className="card-body">
+          <div className="card-text" style={{ height: "3rem" }}>
+            {descripcion}
+          </div>
+        </div>
+        <div className="card-footer text-muted">
+          <Link to={`/producto/${producto.codigo}`} className="btn btn-primary">
+              Ver detalle
+          </Link>    {/* link a vista ProductDetail  */}
+        </div> 
+      </div> 
     </div>
   )
 

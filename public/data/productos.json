@@ -2,7 +2,8 @@
   "productos": [
     {
       "codigo": "3120",
-      "tipo": "Lámpara Bulbo",
+      "tipo": "lampara",
+      "subtipo": "bulbo",
       "nombre": "Lámpara Bulbo 6w 3000K",
       "descripcion": "Lámpara Bulbo 6w luz cálida equivalente a 40w lámpara común",
       "cantidad": "20",
@@ -11,7 +12,8 @@
     },
     {
       "codigo": "3121",
-      "tipo": "Lámpara Bulbo",
+      "tipo": "lampara",
+      "subtipo": "bulbo",
       "nombre": "Lámpara Bulbo 6w 6000K",
       "descripcion": "Lámpara Bulbo 6w luz fría equivalente a 40w lámpara común",
       "titulo": "Más vendido",
@@ -21,7 +23,8 @@
     },
     {
       "codigo": "3122",
-      "tipo": "Lámpara Bulbo",
+      "tipo": "lampara",
+      "subtipo": "bulbo",
       "nombre": "Lámpara Bulbo 8w 3000K",
       "descripcion": "Lámpara Bulbo 8w luz cálida equivalente a 60w lámpara común",
       "cantidad": "20",
@@ -30,7 +33,8 @@
     },
     {
       "codigo": "3123",
-      "tipo": "Lámpara Bulbo",
+      "tipo": "lampara",
+      "subtipo": "bulbo",
       "nombre": "Lámpara Bulbo 8w 6000K",
       "descripcion": "Lámpara Bulbo 8w luz fría equivalente a 60w lámpara común",
       "titulo": "Oferta!!!",
@@ -40,7 +44,8 @@
     },
     {
       "codigo": "3124",
-      "tipo": "Lámpara Bulbo",
+      "tipo": "lampara",
+      "subtipo": "bulbo",
       "nombre": "Lámpara Bulbo 10w 3000K",
       "descripcion": "Lámpara Bulbo 10w luz cálida equivalente a 75w lámpara común",
       "cantidad": "20",
@@ -49,7 +54,8 @@
     },
     {
       "codigo": "3125",
-      "tipo": "Lámpara Bulbo",
+      "tipo": "lampara",
+      "subtipo": "bulbo",
       "nombre": "Lámpara Bulbo 10w 6000K",
       "descripcion": "Lámpara Bulbo 10w luz fría equivalente a 75w lámpara común",
       "cantidad": "40",
@@ -58,7 +64,8 @@
     },
     {
       "codigo": "3126",
-      "tipo": "Lámpara Bulbo",
+      "tipo": "lampara",
+      "subtipo": "bulbo",
       "nombre": "Lámpara Bulbo 12w 3000K",
       "descripcion": "Lámpara Bulbo 12w luz cálida equivalente a 100w lámpara común",
       "cantidad": "20",
@@ -67,7 +74,8 @@
     },
     {
       "codigo": "3127",
-      "tipo": "Lámpara Bulbo",
+      "tipo": "lampara",
+      "subtipo": "bulbo",
       "nombre": "Lámpara Bulbo 12w 6000K",
       "descripcion": "Lámpara Bulbo 12w luz fría equivalente a 100w lámpara común",
       "cantidad": "20",
@@ -76,7 +84,8 @@
     },
     {
       "codigo": "3133",
-      "tipo": "Lámpara Bulbo",
+      "tipo": "lampara",
+      "subtipo": "bulbo",
       "nombre": "Lámpara Bulbo 15w 6000K",
       "descripcion": "Lámpara Bulbo 15w luz fría equivalente a 120w lámpara común",
       "cantidad": "20",
@@ -85,7 +94,8 @@
     },
     {
       "codigo": "1043",
-      "tipo": "Lámpara Dicrocia",
+      "tipo": "lampara",
+      "subtipo": "dicrocia",
       "nombre": "Lámpara Dicroica 5w 38° 3000K",
       "descripcion": "Lámpara Dicroica 5w iluminación hasta 38° luz cálida",
       "cantidad": "10",
@@ -94,7 +104,8 @@
     },
     {
       "codigo": "1053",
-      "tipo": "Lámpara Dicrocia",
+      "tipo": "lampara",
+      "subtipo": "dicrocia",
       "nombre": "Lámpara Dicroica 7w 38° 3000K",
       "descripcion": "Lámpara Dicroica 7w iluminación hasta 38° luz cálida",
       "cantidad": "10",
@@ -103,7 +114,8 @@
     },
     {
       "codigo": "1142B",
-      "tipo": "Lámpara Dicrocia",
+      "tipo": "lampara",
+      "subtipo": "dicrocia",
       "nombre": "Lámpara Dicroica 5w 38° Blister 6000K",
       "descripcion": "Lámpara Dicroica 5w iluminación hasta en Blister luz fría",
       "cantidad": "10",
@@ -112,7 +124,8 @@
     },
     {
       "codigo": "3029",
-      "tipo": "Lámpara Globo",
+      "tipo": "lampara",
+      "subtipo": "globo",
       "nombre": "Lámpara Globo 12w 6000K",
       "descripcion": "Lámpara Globo 12w luz fría",
       "titulo": "Oferta!!!",
@@ -122,7 +135,8 @@
     },
     {
       "codigo": "3260",
-      "tipo": "Lámpara Gota",
+      "tipo": "lampara",
+      "subtipo": "gota",
       "nombre": "Lámpara Gota 7w 3000K",
       "descripcion": "Lámpara Gota 7w rosca E27 luz cálida",
       "cantidad": "10",
@@ -131,7 +145,8 @@
     },
     {
       "codigo": "3424",
-      "tipo": "Lámpara Perfume",
+      "tipo": "lampara",
+      "subtipo": "perfume",
       "nombre": "Lámpara Perfume 1,7w 3000K",
       "descripcion": "Lámpara Perfume 1,7w rosca E14 luz cálida",
       "cantidad": "5",
@@ -140,7 +155,8 @@
     },
     {
       "codigo": "3611",
-      "tipo": "Lámpara Serie T",
+      "tipo": "lampara",
+      "subtipo": "serieT",
       "nombre": "Lámpara Serie T 25w 6000K",
       "descripcion": "Lámpara Serie T 25w E27 Termoplastico-Aluminio luz fría",
       "titulo": "Oferta!!!",
@@ -150,7 +166,8 @@
     },
     {
       "codigo": "3613",
-      "tipo": "Lámpara Serie T",
+      "tipo": "lampara",
+      "subtipo": "serieT",
       "nombre": "Lámpara Serie T 35w 6000K",
       "descripcion": "Lámpara Serie T 35w E27/E40 Termoplastico-Aluminio  luz fría",
       "cantidad": "10",
@@ -159,7 +176,8 @@
     },
     {
       "codigo": "3615",
-      "tipo": "Lámpara Serie T",
+      "tipo": "lampara",
+      "subtipo": "serieT",
       "nombre": "Lámpara Serie T 45w 6000K",
       "descripcion": "Lámpara Serie T 45w E27/E40 Termoplastico-Aluminio  luz fría",
       "cantidad": "10",
@@ -168,7 +186,8 @@
     },
     {
       "codigo": "4503",
-      "tipo": "Tortuga",
+      "tipo": "luminaria",
+      "subtipo": "tortuga",
       "nombre": "Tortuga 12w ovalada blanca 3000K",
       "descripcion": "Tortuga 12w ovalada blanca, 20,0 x 9,8 x 4,5 cm luz cálida",
       "titulo": "Bajo de precio!!!",
@@ -178,7 +197,8 @@
     },
     {
       "codigo": "4507",
-      "tipo": "Tortuga",
+      "tipo": "luminaria",
+      "subtipo": "tortuga",
       "nombre": "Tortuga 18w ovalada blanca 3000K",
       "descripcion": "Tortuga 18w ovalada blanca, 23,0 x 10,5 x 2,5 cm luz cálida",
       "cantidad": "5",
@@ -187,7 +207,8 @@
     },
     {
       "codigo": "5703",
-      "tipo": "Luminaria embutir",
+      "tipo": "luminaria",
+      "subtipo": "embutir",
       "nombre": "Luminaria 12w redonda embutir 3000K",
       "descripcion": "Luminaria 12w redonda embutir luz cálida",
       "cantidad": "5",
@@ -196,7 +217,8 @@
     },
     {
       "codigo": "5705",
-      "tipo": "Luminaria embutir",
+      "tipo": "luminaria",
+      "subtipo": "embutir",
       "nombre": "Luminaria 12w redonda embutir 6000K",
       "descripcion": "Luminaria 12w redonda embutir luz fría",
       "cantidad": "5",
@@ -205,7 +227,8 @@
     },
     {
       "codigo": "5808",
-      "tipo": "Luminaria aplicar",
+      "tipo": "luminaria",
+      "subtipo": "aplicar",
       "nombre": "Luminaria 18w redonda aplicar 3000K",
       "descripcion": "Luminaria 18w redonda aplicar luz cálida",
       "cantidad": "5",
@@ -214,7 +237,8 @@
     },
     {
       "codigo": "5852",
-      "tipo": "Luminaria aplicar",
+      "tipo": "luminaria",
+      "subtipo": "aplicar",
       "nombre": "Luminaria 6w cuadrada aplicar 6000K",
       "descripcion": "Luminaria 6w cuadrada aplicar luz fría",
       "titulo": "Bajo de precio!!!",
@@ -224,7 +248,8 @@
     },
     {
       "codigo": "5856",
-      "tipo": "Luminaria aplicar",
+      "tipo": "luminaria",
+      "subtipo": "aplicar",
       "nombre": "Luminaria 18w cuadrada aplicar 3000K",
       "descripcion": "Luminaria 18w cuadrada aplicar luz cálida",
       "cantidad": "5",
@@ -233,7 +258,8 @@
     },
     {
       "codigo": "5858",
-      "tipo": "Luminaria aplicar",
+      "tipo": "luminaria",
+      "subtipo": "aplicar",
       "nombre": "Luminaria 18w cuadrada aplicar 6000K",
       "descripcion": "Luminaria 18w cuadrada aplicar luz fría",
       "cantidad": "5",
@@ -242,7 +268,8 @@
     },
     {
       "codigo": "5861",
-      "tipo": "Luminaria aplicar",
+      "tipo": "luminaria",
+      "subtipo": "aplicar",
       "nombre": "Luminaria 24w cuadrada aplicar 6000K",
       "descripcion": "Luminaria 24w cuadrada aplicar luz fría",
       "cantidad": "5",
@@ -251,7 +278,8 @@
     },
     {
       "codigo": "7603",
-      "tipo": "Proyector",
+      "tipo": "proyector",
+      "subtipo": "proyector",
       "nombre": "Proyector 10w 6000K",
       "descripcion": "Proyector 10w Prolite luz fría",
       "titulo": "Ofertón!!!",
@@ -261,7 +289,8 @@
     },
     {
       "codigo": "2501",
-      "tipo": "Luminaria emergencia",
+      "tipo": "luminaria",
+      "subtipo": "emergencia",
       "nombre": "Luminaria de emergencia de 30 leds",
       "descripcion": "Luminaria de emergencia de 30 leds 25 cm luz fría",
       "cantidad": "2",
@@ -270,7 +299,8 @@
     },
     {
       "codigo": "2503",
-      "tipo": "Luminaria emergencia",
+      "tipo": "luminaria",
+      "subtipo": "emergencia",
       "nombre": "Luminaria de emergencia de 90 leds",
       "descripcion": "Luminaria de emergencia de 90 leds 52 cm luz fría",
       "cantidad": "2",

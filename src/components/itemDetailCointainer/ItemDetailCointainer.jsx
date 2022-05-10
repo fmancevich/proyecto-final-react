@@ -2,31 +2,52 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ItemDetail from '../itemDetail/ItemDetail';
 
-const ItemDetailCointainer = ({ index, producto }) => {
+const ItemDetailCointainer = ({ codigo }) => {
 
-  // console.log(index, producto);
+  console.log(`codigo: ${codigo}`);
 
-  // const [productoDetail, setProductoDetail] = useState([producto]);
+  // const [productos, setProductos] = useState([]);
+  const [producto, setProducto] = useState(null);
 
-  // // obtiene el producto segun el index 
-  // const getProductoPorId = async () => {
-  //   await axios.get('./data/productos.json')
-  //     .then(response => {
-  //       // console.log('response.data ==> ', response.data.productos)
-  //       setProducto(response.data.productos);
-  //     })
-  //     .catch(error => console.error(error));
-  // }
+  // // obtiene el json de productos de public/data usando axios y try catch
+  // const getProductos = async () => {
+  //   try {
+  //     const response = await axios.get('/data/productos.json')
+  //     console.log('response.data.productos ==> ', response.data.productos)
+  //     setProductos(response.data.productos);
+      
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
-  // useEffect(() => {
-  //   getProductoPorId(index)        // obtiene lista de productos
-  // }, [])  
+  const getProductoPorId = async () => {
+    try {
+      const response = await axios.get('/data/productos.json')
+      const productos = response.data.productos;
+      // console.log('esto es lo que hay en productos...');
+      // console.log(productos);
+
+      const productoEncontrado = productos.find(item => item.codigo === codigo)
+      console.log(`productoEncontrado => ${JSON.stringify(productoEncontrado)}`)
+      setProducto(productoEncontrado)
+      
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
+  // obtiene lista de productos simulando que tarda 3 segundos
+  useEffect(() => {
+    setTimeout(getProductoPorId, 10);      
+  }, [])  
 
 
   return (
     <div className='itemDetailContainer'>
 
-        <ItemDetail index={index} producto={producto} />
+        {producto ? <ItemDetail producto={producto} /> : <h1 style={{ padding: "30px 0px"}}>Cargando...</h1>}
 
     </div>
   )
