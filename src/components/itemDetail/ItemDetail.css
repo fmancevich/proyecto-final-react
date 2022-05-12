@@ -1,8 +1,8 @@
 .itemDetail {
-    margin: 0px 80px 30px 80px;
+    margin: 30px 80px;
 }
 
-.btnAdd {
+.btnAdd .btnCart {
     margin-bottom: 10px;
     height: 3rem
 };

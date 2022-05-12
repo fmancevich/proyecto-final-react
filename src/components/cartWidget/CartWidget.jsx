@@ -6,7 +6,7 @@ import './CartWidget.css';
 const CartWidget = (props) => {
   return (
 
-    <div>
+    <div className='cartWidget'>
         <FaShoppingCart size={20} color={'#eef5ff'} /> 
         <span style={{color: '#88bafe'}}>&nbsp;{props.cantItems}</span>
     </div> 

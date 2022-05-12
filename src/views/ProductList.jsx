@@ -4,8 +4,8 @@ import ItemListContainer from './../components/itemListContainer/ItemListContain
 
 // No se esta usando fue reemplazado por ProductTipo.jsx (sin tipo significa => TODOS)
 const ProductList = () => {
-  const location = useLocation()
-  const {codigo} = useParams()
+  // const location = useLocation()
+  // const {codigo} = useParams()
 
   //console.log("location",location)
   //console.log("params",params)

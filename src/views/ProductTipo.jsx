@@ -6,8 +6,8 @@ const ProductTipo = () => {
   const location = useLocation()
   const {tipo} = useParams()
 
-  //console.log("location",location)
-  //console.log("params",params)
+  console.log('location => ', location)
+  console.log('tipo => ', tipo)
   
   return (
     <div className='productTipo'>
