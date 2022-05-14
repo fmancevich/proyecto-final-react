@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 import { useState } from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({ initial = 1, stock = 1, onAdd }) => {
+const ItemCount = ({ initial = 1, stock, onAdd }) => {
 
   const [cantidad, setCantidad] = useState(initial);
 
@@ -27,9 +27,13 @@ const ItemCount = ({ initial = 1, stock = 1, onAdd }) => {
   return (
     <div className='itemCount'>
       <div className='buttonsQuantity'>
-        <Button className='buttonSign' disabled={cantidad <= 1} variant="text" onClick={decrement} > - </Button>
+        <button type="button" className='buttonSign' disabled={cantidad <= 1} 
+                variant="text" onClick={decrement} 
+                style={{ background: "none", border: "none", cursor: "pointer" }}> - </button>
         <p className='contador'>{cantidad}</p>
-        <Button className='buttonSign' disabled={cantidad >= stock} variant="text" onClick={increment} > + </Button>
+        <button type="button" className='buttonSign' disabled={cantidad >= stock} 
+                variant="text" onClick={increment} 
+                style={{ background: "none", border: "none", cursor: "pointer" }}> + </button>
       </div>
     </div>
   )

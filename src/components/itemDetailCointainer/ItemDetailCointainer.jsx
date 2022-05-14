@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ItemDetail from '../itemDetail/ItemDetail';
+import Loader from '../Loader/Loader';
 
 const ItemDetailCointainer = ({ codigo }) => {
 
@@ -50,9 +51,7 @@ const ItemDetailCointainer = ({ codigo }) => {
         {producto ? 
             <ItemDetail producto={producto} /> 
         : 
-          <div className="spinner-border text-secondary m-4" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
+          <Loader/>     // spinner
         }
     </div>
   )

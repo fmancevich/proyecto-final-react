@@ -21,10 +21,12 @@
     margin: 0px 6px;
 }
 
-.buttonSign:focus {
-    box-shadow: none !important;
+.buttonsQuantity .buttonSign:focus {
+    box-shadow: none important;
+    border: none important;
 }
 
-.buttonSign:hover {
-    box-shadow: none !important;
+.buttonsQuantity .buttonSign:hover {
+    box-shadow: none important;
+    border: none important;
 }

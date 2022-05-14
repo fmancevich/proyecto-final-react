@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Item from '../item/Item';
-import { Container, Row, Col } from 'react-bootstrap';
+// import { Container, Row, Col } from 'react-bootstrap';
 
 const ItemList = ( {productos, tipo} ) => {
 
@@ -31,17 +31,17 @@ const ItemList = ( {productos, tipo} ) => {
             } [tipo]
           }
       </h3> 
-      <Container>
-        <Row>
+      <div className="container">
+        <div className="row">
           { 
               productosFiltrados.map((producto, index) => (
-                <Col lg={4} sm={6} xs={12} key={index} >
+                <div className="col-lg-4 col-sm-6 col-xs-12" key={index} >
                   <Item index={index} producto={producto} />
-                </Col>
+                </div>
               ))
           }
-        </Row>
-      </Container>
+        </div>
+      </div>
     </div>
   )
 };

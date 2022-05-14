@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import ItemList from '../itemList/ItemList';
 import axios from 'axios';
+import Loader from '../Loader/Loader';
 
 const ItemListContainer = ( {titulo, tipo} ) => {
 
@@ -38,13 +39,6 @@ const ItemListContainer = ( {titulo, tipo} ) => {
   const getProductos = async () => {
     try {
       const response = await axios.get('/data/productos.json')
-
-      // if (tipo === undefined) {           // no hay filtro
-      //   setProductos(response.data.productos);
-      // } else {                           // filtra por tipo
-      //   setProductos(response.data.productos.filter(item => item.tipo === tipo));
-      // }
-
       setProductos(response.data.productos)
 
     } catch (error) {
@@ -61,32 +55,12 @@ const ItemListContainer = ( {titulo, tipo} ) => {
   // console.log('ItemListContainer productos', productos)
 
   return (
-    // <div className='itemListContainer container p-5'>
     <div className='itemListContainer'>
         <h1 style={{ padding: (0, 20) }} >{titulo}</h1>
-        {/* <h3 className='subtitulo'>
-            {
-              {
-                'lampara': 'Lámparas',
-                'luminaria': 'Luminarias',                                                    
-                'proyector': 'Proyectores',
-                undefined: 'Todos los Productos'
-              } [tipo]
-            }
-        </h3>  */}
-
-        {/* { productos.length > 0 ? 
-            <ItemList productos={productos} tipo={tipo} />
-        : 
-            <h1 style={{ padding: "30px 0px"}}>Cargando...</h1>
-        } */}
-
         { productos.length > 0 ? 
             <ItemList productos={productos} tipo={tipo} />
         : 
-            <div className="spinner-border text-secondary m-4" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
+            <Loader/>     // spinner
         }
     </div>
   )
