@@ -11,7 +11,8 @@ const Layout = () => {
 
         {/* <Main/> */}
         {/* <div className='container-fluid p-5'> */}
-        <div className='container-fluid' style={{ paddingTop: "5%" }}>
+        {/* <div className='container-fluid' style={{ paddingTop: "5%" }}> */}
+        <div className='container-fluid' pt-5>
           <Outlet/>
           {/*<Route index element={<Home />} />  
               <Route path="/productos" element={<ItemListContainer />} />  

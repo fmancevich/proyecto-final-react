@@ -3,6 +3,9 @@ import ItemList from '../itemList/ItemList';
 import axios from 'axios';
 import Loader from '../Loader/Loader';
 
+import db from '../../services/firebase'
+import { doc, getDoc, getDocs } from "firebase/firestore"
+
 const ItemListContainer = ( {titulo, tipo} ) => {
 
   // console.log(`tipo ==> ${tipo}`);
@@ -55,7 +58,7 @@ const ItemListContainer = ( {titulo, tipo} ) => {
   // console.log('ItemListContainer productos', productos)
 
   return (
-    <div className='itemListContainer'>
+    <div className='itemListContainer container pt-5'>
         <h1 style={{ padding: (0, 20) }} >{titulo}</h1>
         { productos.length > 0 ? 
             <ItemList productos={productos} tipo={tipo} />

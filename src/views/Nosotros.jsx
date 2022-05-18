@@ -2,7 +2,7 @@ import React from 'react'
 
 const Nosotros = () => {
   return (
-    <div className='nosotros'>
+    <div className='nosotros container pt-5 '>
         <h4 style={{ textAlign: "left", padding: "20px" }}>
             Nosotros. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum perspiciatis, 
             nihil similique numquam consectetur veritatis maiores? Molestiae odio eius, eaque aperiam 

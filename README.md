@@ -1,3 +1,21 @@
+Aplicación React con Bootstrap 5
+
+La app es un e-Commerce de venta de productos de iluminación, la empresa se llama lighting .net
+
+Los links se despliegan de item dropdown de navbar "Productos" de la siguiente forma:
+
+por tipo (categoria) 
+http://localhost:3000/productos           (todos los productos)
+http://localhost:3000/tipo/lampara
+http://localhost:3000/tipo/luminaria
+
+
+por item
+http://localhost:3000/producto/1043
+http://localhost:3000/producto/2501
+http://localhost:3000/producto/3613
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

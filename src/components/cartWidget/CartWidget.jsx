@@ -14,10 +14,16 @@ const CartWidget = () => {
   return (
 
     <div className='cartWidget mx-5'>
-      <Link to={'/cart'} >
-        <FaShoppingCart size={20} color={'#eef5ff'} />&nbsp;&nbsp; 
-        <span style={{color: '#88bafe'}}>{contextItemsCart}</span>
-      </Link>
+
+        {contextItemsCart() > 0 ? 
+          <Link to={'/cart'} >
+            <FaShoppingCart size={20} color={'#eef5ff'} />&nbsp;&nbsp; 
+            <span style={{color: '#88bafe'}}>{contextItemsCart()}</span>
+          </Link>
+      : 
+          <></>     // nada
+        }
+
     </div> 
    
   )

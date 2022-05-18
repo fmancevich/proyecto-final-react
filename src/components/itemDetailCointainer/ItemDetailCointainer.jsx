@@ -46,8 +46,7 @@ const ItemDetailCointainer = ({ codigo }) => {
 
 
   return (
-    <div className='itemDetailContainer'>
-        {/* {producto ? <ItemDetail producto={producto} /> : <h1 style={{ padding: "30px 0px"}}>Cargando...</h1>} */}
+    <div className='itemDetailContainer container pt-5'>
         {producto ? 
             <ItemDetail producto={producto} /> 
         : 
