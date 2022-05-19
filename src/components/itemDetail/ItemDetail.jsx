@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { BsFillCartPlusFill, BsFillCartCheckFill } from 'react-icons/bs';
 import { GlobalContext } from '../../context/GlobalProvider';
 import ItemCount from '../itemCount/ItemCount';
+import { formatGoogleSharedUrl } from '../../utils/Utils'
 import './ItemDetail.css';
 
 const ItemDetail = ( { producto } ) => {
@@ -19,7 +20,9 @@ const ItemDetail = ( { producto } ) => {
   const [state, setState] = useState(producto);
 
   let nombre = producto.nombre === undefined ? `${blank}` : producto.nombre 
-  let imagen = '/images/' + ( producto.imagen === undefined ? 'imagen_no_disponible.jpg' : producto.imagen);
+  // let imagen = '/images/' + ( producto.imagen === undefined ? 'imagen_no_disponible.jpg' : producto.imagen);
+  let imagen = ( producto.url === undefined ? '/images/imagen_no_disponible.jpg' 
+                                            : formatGoogleSharedUrl(producto.url));
   let stock = producto.cantidad;
 
 

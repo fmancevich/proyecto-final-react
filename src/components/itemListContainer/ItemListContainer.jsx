@@ -1,59 +1,59 @@
 import { useState, useEffect } from 'react';
 import ItemList from '../itemList/ItemList';
-import axios from 'axios';
+// import axios from 'axios';
 import Loader from '../Loader/Loader';
 
-import db from '../../services/firebase'
-import { doc, getDoc, getDocs } from "firebase/firestore"
+// Firebase
+import { db } from '../../services/firebase'
+import { collection, getDocs, query, where, orderBy } from "firebase/firestore"
 
 const ItemListContainer = ( {titulo, tipo} ) => {
 
-  // console.log(`tipo ==> ${tipo}`);
+  console.log('tipo ==> ', tipo);
 
   const [productos, setProductos] = useState([]);
 
-  // // obtiene el json de productos de public/data usando fetch api
-  // const getProductos = () => {
-  //   fetch('data/productos.json', 
-  //   { headers : {'Content-Type': 'application/json', 'Accept': 'application/json' }}
-  //   )
-  //   .then(response => {
-  //     // console.log('response ==> ', response)
-  //     return response.json();
-  //   })
-  //   .then(data => {
-  //     // console.log('data ==> ', data.productos);
-  //     setProductos(data);
-  //   })
-  //   .catch(error => console.error(error));
-  // }
-
-  // // obtiene el json de productos de public/data usando axios y then / catch
+  // // obtiene el json de productos de public/data usando axios y try catch
   // const getProductos = async () => {
-  //   await axios.get('./data/productos.json')
-  //     .then(response => {
-  //       // console.log('response.data ==> ', response.data.productos)
-  //       setProductos(response.data.productos);
-  //     })
-  //     .catch(error => console.error(error));
-  // }
+  //   try {
+  //     const response = await axios.get('/data/productos.json')
+  //     setProductos(response.data.productos)
 
-  // obtiene el json de productos de public/data usando axios y try catch
-  const getProductos = async () => {
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // obtiene la collection 'productos' del cloude firestore de Firebase
+  const getProductos = async (tipo) => {
+
+    const coleccion = collection(db, 'productos')
+
     try {
-      const response = await axios.get('/data/productos.json')
-      setProductos(response.data.productos)
+
+      if (tipo === undefined) {           // no hay filtro (todos los productos)
+        // var data = await getDocs(coleccion)
+        var q = query(coleccion, orderBy("tipo"), orderBy("subtipo"), orderBy("codigo"))
+      } else {                           // filtra por tipo
+        var q = query(coleccion, where("tipo", "==", tipo), orderBy("subtipo"), orderBy("codigo"))
+      }
+
+      const data = await getDocs(q)
+
+      // console.log(data.docs.map(doc => doc = {id: doc.id, ...doc.data()}))
+      setProductos(data.docs.map(doc => doc = {id: doc.id, ...doc.data()}))
 
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   };
 
   // obtiene lista de productos simulando que tarda 3 segundos
   useEffect(() => {
-    setTimeout(getProductos, 800);  
-  // }, [tipo])  
-  }, [])  
+    // setTimeout(getProductos, 1000);  
+    getProductos(tipo);  
+  }, [tipo])  
+  // }, [])  
 
   // console.log('ItemListContainer productos', productos)
 

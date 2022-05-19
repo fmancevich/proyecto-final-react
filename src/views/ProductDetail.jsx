@@ -5,14 +5,16 @@ import ItemDetailCointainer from '../components/itemDetailCointainer/ItemDetailC
 const ProductDetail = () => {
 
   const location = useLocation()
-  const {codigo} = useParams()
+  // const {codigo} = useParams()
+  const {id} = useParams()
 
   //console.log("location",location)
   //console.log("params",params)
   
   return (
     <div className='productDetail'>
-        <ItemDetailCointainer codigo={codigo} />
+        {/* <ItemDetailCointainer codigo={codigo} /> */}
+        <ItemDetailCointainer id={id} />
     </div>
   )
 }

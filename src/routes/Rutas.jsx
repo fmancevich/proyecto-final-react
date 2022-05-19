@@ -20,7 +20,8 @@ const Rutas = () => {
                     {/* <Route path="/productos" element={<ProductList />} />   */}
                     <Route path="/productos" element={<ProductTipo />} />  
                     <Route path="/tipo/:tipo" element={<ProductTipo />} />  
-                    <Route path="/producto/:codigo" element={<ProductDetail />} />  
+                    {/* <Route path="/producto/:codigo" element={<ProductDetail />} />   */}
+                    <Route path="/producto/:id" element={<ProductDetail />} />  
                     <Route path="/nosotros" element={<Nosotros />} />  
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/checkout" element={<Checkout />} />

@@ -1,8 +1,10 @@
 // import React from 'react'
    
 export const formatPriceNumber = (numero) => {
-    // return numero.toLocaleString('es-AR', { minimumFractionDigits: 2 , 
-    //                                         maximumFractionDigits: 2 })  
-    return numero.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' });                                            
+    return numero.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' });
 }
 
+   
+export const formatGoogleSharedUrl = (url) => {
+    return url.replace('/view?usp=sharing','').replace('file/d/','uc?export=view&id=')
+}
