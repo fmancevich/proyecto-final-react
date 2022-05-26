@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BsFillCartPlusFill, BsFillCartCheckFill } from 'react-icons/bs';
+import { BsFillCartPlusFill, BsFillCartCheckFill, BsFillCartFill } from 'react-icons/bs';
 import { GlobalContext } from '../../context/GlobalProvider';
 import ItemCount from '../itemCount/ItemCount';
-import { formatGoogleSharedUrl } from '../../utils/Utils'
+import { formatGoogleSharedUrl, formatPriceNumber } from '../../utils/Utils'
 import './ItemDetail.css';
 
 const ItemDetail = ( { producto } ) => {
@@ -12,12 +12,11 @@ const ItemDetail = ( { producto } ) => {
 
   const blank = '\u00A0';
 
-  const { addToCart } = useContext(GlobalContext); 
+  const { addToCart, isInCart } = useContext(GlobalContext); 
   
-  // const [itemsCarrito, setItemsCarrito] = useState(0);
-  const [enableAdd, setEnableAdd] = useState(true);
+  // const [enableAdd, setEnableAdd] = useState(true);
+  // const [enableAdd, setEnableAdd] = useState(isInCart(producto.codigo));
   const [cantidad, setCantidad] = useState(0);
-  const [state, setState] = useState(producto);
 
   let nombre = producto.nombre === undefined ? `${blank}` : producto.nombre 
   // let imagen = '/images/' + ( producto.imagen === undefined ? 'imagen_no_disponible.jpg' : producto.imagen);
@@ -32,23 +31,54 @@ const ItemDetail = ( { producto } ) => {
   };
 
   const agregarAlCarrito = (cantidad) => {
-    const mensaje = `Se agregaran ${JSON.stringify(cantidad)} items del producto 
-                     ${producto.codigo} - ${producto.nombre} al carrito`;
-    console.log(mensaje);
+    // const mensaje = `Se agregaran ${JSON.stringify(cantidad)} items del producto 
+    //                  ${producto.codigo} - ${producto.nombre} al carrito`;
+    // console.log(mensaje);
     // alert(mensaje);
-    addToCart(state, cantidad)
-    setEnableAdd(false)
+    addToCart(producto, cantidad)
+    // setEnableAdd(false)
   };
 
   const goToCart = () => {
     const mensaje = `Se finaliza la compra, redirecciona al carrito...`;
-    console.log(mensaje);
+    // console.log(mensaje);
     // alert(mensaje);
   };
 
   const volver = () => {
     // console.log('ejecuta volver()...')
     window.history.back()
+  }
+
+  const Botones = () => {
+    return (
+      <div className='botones container d-flex justify-content-end gap-5 my-4'>
+        <div className="boton">
+            {/* { enableAdd ?  */}
+            { !isInCart(producto.codigo) ? 
+              <div className="btnAdd" > 
+                <button type="button" className="btn btn-primary" 
+                        // onClick={() => handleOnAdd(itemsCarrito)}>
+                        onClick={() => agregarAlCarrito(cantidad)}>
+                    <BsFillCartPlusFill />{" "}Agregar al carrito
+                </button>
+              </div>
+            : 
+              <div className="btnCart" > 
+                <Link to={`/cart`} className="btn btn-warning"
+                        onClick={() => goToCart()}>
+                    <BsFillCartCheckFill />{" "}Finalizar compra
+                </Link>    {/* link a vista ProductDetail  */}
+              </div>
+            }
+        </div>
+        <div className="boton">
+          <button className="btn btn-secondary" onClick={volver} >
+            <BsFillCartFill/>{" "}Seguir comprando
+          </button>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -64,47 +94,26 @@ const ItemDetail = ( { producto } ) => {
           </div>
           {/* Body */}
           <div className="modal-body" >
-            <div className="row centrado" >
+            <div className="row centrado d-flex align-items-center" >
               {/* Imagen producto */}
-              <div className="col-sm-4">
+              <div className="col-md-4">
                 <img width="200" height="200" src={imagen} />
               </div>
               {/* Detalle producto */}
-              <div className="col-sm-8 p-4">
+              <div className="col-md-8 p-4">
                 <p className="titulo fw-bold fs-4">{producto.titulo}</p> <br />
                 <p className="descripcion fw-bold fs-5">Código: {` ${producto.codigo}`}</p>
                 <p className="descripcion fs-5">{producto.descripcion}</p>
-                <p className="precio fw-bold fs-4">${producto.precio}</p> <br />
+                <p className="precio fw-bold fs-4">{formatPriceNumber(producto.precio)}</p> <br />
 
                 {/* contador cantidad producto */}
                 <ItemCount initial={1} stock={stock} onAdd={onAdd} />
-                
-                {/* botones condicionales */}
-                {/* { cantidad > 0 ?  */}
-                { enableAdd ? 
-                  <div className="btnAdd" > 
-                    <button type="button" className="btn btn-primary" 
-                            // onClick={() => handleOnAdd(itemsCarrito)}>
-                            onClick={() => agregarAlCarrito(cantidad)}>
-                        <BsFillCartPlusFill />{" "}Agregar al carrito
-                    </button>
-                  </div>
-                : 
-                  <div className="btnCart" > 
-                    <Link to={`/cart`} className="btn btn-warning"
-                            onClick={() => goToCart()}>
-                        <BsFillCartCheckFill />{" "}Finalizar compra
-                    </Link>    {/* link a vista ProductDetail  */}
-                  </div>
-                }
               </div>
             </div>
           </div>
           {/* Footer */}
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" onClick={volver} >
-                Volver
-            </button>
+            <Botones/>
           </div>
 
         </div>

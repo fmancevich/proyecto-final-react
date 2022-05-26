@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
 import ItemDetail from '../itemDetail/ItemDetail';
-import Loader from '../Loader/Loader';
+import Loader from '../loader/Loader';
 
 // Firebase
 import { db } from '../../services/firebase'
@@ -51,7 +51,7 @@ const ItemDetailCointainer = ({ id }) => {
   // obtiene lista de productos simulando que tarda 3 segundos
   useEffect(() => {
     getProductoPorId();      
-  }, [])  
+  }, [id])  
 
 
   return (

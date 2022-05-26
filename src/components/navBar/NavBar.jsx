@@ -11,7 +11,7 @@ const NavBar = () => {
             <div className="container-fluid mx-3">
                 <Link to="/" className="text-decoration-none" >
                     <a className="navbar-brand">
-                        <img alt="" src="/logo.png" width="60" height="60"
+                        <img alt="" src="./logo.png" width="60" height="60"
                             className="d-inline-block align-center" />
                         &nbsp;&nbsp;&nbsp;lighting .net
                     </a>

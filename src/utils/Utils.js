@@ -8,3 +8,4 @@ export const formatPriceNumber = (numero) => {
 export const formatGoogleSharedUrl = (url) => {
     return url.replace('/view?usp=sharing','').replace('file/d/','uc?export=view&id=')
 }
+

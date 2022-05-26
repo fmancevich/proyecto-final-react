@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ItemList from '../itemList/ItemList';
 // import axios from 'axios';
-import Loader from '../Loader/Loader';
+import Loader from '../loader/Loader';
 
 // Firebase
 import { db } from '../../services/firebase'
@@ -9,7 +9,7 @@ import { collection, getDocs, query, where, orderBy } from "firebase/firestore"
 
 const ItemListContainer = ( {titulo, tipo} ) => {
 
-  console.log('tipo ==> ', tipo);
+  // console.log('tipo ==> ', tipo);
 
   const [productos, setProductos] = useState([]);
 
@@ -39,7 +39,7 @@ const ItemListContainer = ( {titulo, tipo} ) => {
       }
 
       const data = await getDocs(q)
-
+              
       // console.log(data.docs.map(doc => doc = {id: doc.id, ...doc.data()}))
       setProductos(data.docs.map(doc => doc = {id: doc.id, ...doc.data()}))
 

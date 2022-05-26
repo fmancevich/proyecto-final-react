@@ -35,15 +35,15 @@ const GlobalProvider = ( {children} ) => {
 
     // agrega un producto al carrito y la cantidad
     const addToCart = (producto, cantidad) => {
-      console.log('isInCart => ', producto.codigo, isInCart(producto.codigo))
+      // console.log('isInCart => ', producto.codigo, isInCart(producto.codigo))
       if (!isInCart(producto.codigo)) {
           // actualiza la cantidad de items total del carrito
           // setContextItemsCart(contextItemsCart + cantidad)          
           // agrega el producto y la cantidad agregada al carrito 
           setContextCart([...contextCart, { producto, cantidad } ])    
-          const mensaje = `Se agregaron ${JSON.stringify(cantidad)} items del producto` + 
-                          `${producto.codigo} - ${producto.nombre} al carrito`
-          console.log(mensaje)
+          // const mensaje = `Se agregaron ${JSON.stringify(cantidad)} items del producto` + 
+          //                 `${producto.codigo} - ${producto.nombre} al carrito`
+          // console.log(mensaje)
           // alert(mensaje)  
           // return true
       } else {

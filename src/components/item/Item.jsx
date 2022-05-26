@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BsSearch } from 'react-icons/bs';
 import { formatGoogleSharedUrl } from '../../utils/Utils'
 
 const Item = ({ producto }) => {
@@ -29,7 +30,7 @@ const Item = ({ producto }) => {
         <div className="card-footer text-muted">
           {/* <Link to={`/producto/${producto.codigo}`} className="btn btn-primary"> */}
           <Link to={`/producto/${producto.id}`} className="btn btn-primary">
-              Ver detalle
+              <BsSearch/>{" "}Ver detalle
           </Link>    {/* link a vista ProductDetail  */}
         </div> 
       </div> 
