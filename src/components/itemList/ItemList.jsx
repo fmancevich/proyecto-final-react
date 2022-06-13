@@ -5,7 +5,6 @@ const ItemList = ( {productos, tipo} ) => {
   
   return (
     <div className="itemList">
-      {/* <h3 className="subtitulo" style={{ textAlign: "center" }}> */}
       <h3 className="subtitulo" align-center >
           {
             {

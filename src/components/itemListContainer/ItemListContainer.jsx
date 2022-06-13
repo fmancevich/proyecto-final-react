@@ -48,7 +48,6 @@ const ItemListContainer = ( {titulo, tipo} ) => {
 
   return (
     <div className='itemListContainer container align-items-center pt-5'>
-        {/* <h1 style={{ padding: (0, 20), textAlign: "center" }} >{titulo}</h1> */}
         <h1 style={{ padding: (0, 20) }} >{titulo}</h1>
         { productos.length > 0 ? 
             <ItemList productos={productos} tipo={tipo} />

@@ -19,7 +19,8 @@ const Cart = () => {
     
     const Botones = () => {
         return (
-            <div className="botones container d-flex justify-content-end gap-5 my-4">
+            // <div className="botones container d-flex justify-content-end gap-5 my-4">
+            <div className="botones container d-flex gap-5 my-4">
                 <div className="boton">
                     <Link to={`/checkout`} className="btn btn-success"
                         onClick={() => goToCheckout()}>
@@ -79,7 +80,7 @@ const Cart = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="botones py-4">
+                    <div className="botones align-items-center py-4">
                         <Botones/>
                     </div>
                 </div>
