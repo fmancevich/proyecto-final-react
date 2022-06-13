@@ -4,8 +4,8 @@ import Item from '../item/Item';
 const ItemList = ( {productos, tipo} ) => {
   
   return (
-    <div className='itemList'>
-      <h3 className='subtitulo'>
+    <div className="itemList">
+      <h3 className="subtitulo" style={{ textAlign: "center" }}>
           {
             {
               'lampara': 'Lámparas',
