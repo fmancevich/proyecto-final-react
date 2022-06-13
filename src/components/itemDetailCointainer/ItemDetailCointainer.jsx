@@ -37,7 +37,7 @@ const ItemDetailCointainer = ({ id }) => {
   return (
     <div className='itemDetailContainer container p-5'>
         {producto ? 
-            <ItemDetail producto={producto} /> 
+          <ItemDetail producto={producto} /> 
         : 
           <Loader/>     // spinner
         }
