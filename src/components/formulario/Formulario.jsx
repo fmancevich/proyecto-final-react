@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 
 import { GlobalContext } from '../../context/GlobalProvider'
-import { BsBagCheckFill } from 'react-icons/bs'
+import { BsCheckAll } from 'react-icons/bs'
 import toast, { Toaster } from 'react-hot-toast';
 
 // Firebase
@@ -85,11 +85,12 @@ const Formulario = ( { itemsCompra, totalCompra} ) => {
 
 
   return (
+
     <div className='formulario'>
         <form onSubmit={onSubmit} className="container border px-5 py-3 ">
             <h2 className="pb-4">Datos del comprador</h2>
-            <div className="row mb-4">
-                <div className="col">
+            <div className="row">
+                <div className="col-12 col-sm-6 mb-4">
                     <div className="form-floating">
                         <input type="text" name="nombre" className="form-control" 
                                onChange={handleChange} onBlur={handleBlur}
@@ -97,7 +98,7 @@ const Formulario = ( { itemsCompra, totalCompra} ) => {
                         <label className="form-label text-left" htmlFor="nombre">Nombre</label>
                     </div>
                 </div>
-                <div className="col">
+                <div className="col-12 col-sm-6 mb-4">
                     <div className="form-floating">
                         <input type="text" name="apellido" className="form-control" 
                                onChange={handleChange} onBlur={handleBlur}
@@ -107,16 +108,20 @@ const Formulario = ( { itemsCompra, totalCompra} ) => {
                 </div>
             </div>
 
-            {/* Dirección */}
-            <div className="form-floating mb-4">
-                <input type="text" name="direccion" className="form-control" 
-                       onChange={handleChange} onBlur={handleBlur}
-                       placeholder="Direccion" value={direccion} />
-                <label className="form-label" htmlFor="direccion">Dirección</label>
-            </div>
-
             <div className="row mb-4">
                 <div className="col">
+                    {/* Dirección */}
+                    <div className="form-floating">
+                        <input type="text" name="direccion" className="form-control" 
+                            onChange={handleChange} onBlur={handleBlur}
+                            placeholder="Direccion" value={direccion} />
+                        <label className="form-label" htmlFor="direccion">Dirección</label>
+                    </div>
+                </div>
+            </div>
+
+            <div className="row">
+                <div className="col-12 col-sm-6 mb-4">
                     {/* Email input */}
                     <div className="form-floating">
                         <input type="email" name="email" className="form-control" 
@@ -125,7 +130,7 @@ const Formulario = ( { itemsCompra, totalCompra} ) => {
                         <label className="form-label" htmlFor="email">Email</label>
                     </div>
                 </div>
-                <div className="col">
+                <div className="col-12 col-sm-6 mb-4">
                     {/* Telefono input */}
                     <div className="form-floating">
                         <input type="text" name="telefono" className="form-control" 
@@ -138,7 +143,7 @@ const Formulario = ( { itemsCompra, totalCompra} ) => {
 
             {/* Submit button */}
             <button type="submit" className="btn btn-success btn-block my-4">
-                <BsBagCheckFill/>{" "}Terminar compra
+                <BsCheckAll/>{" "}Enviar datos
             </button>
 
             <Toaster/>

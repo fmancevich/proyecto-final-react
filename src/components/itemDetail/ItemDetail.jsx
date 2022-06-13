@@ -67,7 +67,7 @@ const ItemDetail = ( { producto } ) => {
               <div className="btnCart" > 
                 <Link to={`/cart`} className="btn btn-warning"
                         onClick={() => goToCart()}>
-                    <BsFillCartCheckFill />{" "}Finalizar compra
+                    <BsFillCartCheckFill />{" "}Ir al carrito
                 </Link>    {/* link a vista ProductDetail  */}
               </div>
             }
@@ -83,7 +83,7 @@ const ItemDetail = ( { producto } ) => {
 
   return (
 
-      <div className='itemDetail'>
+      <div className='itemDetail container pt-5'>
         <div className="content">
           {/* Header */}
           <div className="modal-header">

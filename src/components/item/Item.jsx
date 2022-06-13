@@ -9,11 +9,8 @@ const Item = ({ producto }) => {
 
   let nombre = producto.nombre === undefined ? `${blank}` : producto.nombre 
   let descripcion = producto.descripcion;
-  // let titulo = producto.titulo; 
-  // let imagen = '/images/' + ( producto.imagen === undefined ? 'imagen_no_disponible.jpg' : producto.imagen);
   let imagen = ( producto.url === undefined ? '/images/imagen_no_disponible.jpg' 
                                             : formatGoogleSharedUrl(producto.url));
-  // let stock = producto.cantidad;
 
   return (
     <div className="item" style={{ display: "block", padding: 30, alignItems: "center" }}>
@@ -28,7 +25,6 @@ const Item = ({ producto }) => {
           </div>
         </div>
         <div className="card-footer text-muted">
-          {/* <Link to={`/producto/${producto.codigo}`} className="btn btn-primary"> */}
           <Link to={`/producto/${producto.id}`} className="btn btn-primary">
               <BsSearch/>{" "}Ver detalle
           </Link>    {/* link a vista ProductDetail  */}

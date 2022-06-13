@@ -1,17 +1,40 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../../context/GlobalProvider'
-import { BsFillCartXFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom';
+import { BsFillCartFill, BsBagCheckFill } from 'react-icons/bs'
 import { MdDelete } from 'react-icons/md'
 import { formatPriceNumber } from '../../utils/Utils'
-import Formulario from './../formulario/Formulario';
-// import './Cart.css';
+// import Formulario from './../formulario/Formulario';
 
 const Cart = () => {
 
     const { contextCart, contextItemsCart, precioTotalCart, 
                                  removeFromCart, clearCart } = useContext(GlobalContext); 
-   
-    // console.log(contextItemsCart(), precioTotalCart(), contextCart)
+
+    const goToCheckout = () => {
+        const mensaje = `Se finaliza la compra, redirecciona al checkout...`;
+        // console.log(mensaje);
+        // alert(mensaje);
+      };
+    
+    const Botones = () => {
+        return (
+            <div className="botones container d-flex justify-content-end gap-5 my-4">
+                <div className="boton">
+                    <Link to={`/checkout`} className="btn btn-success"
+                        onClick={() => goToCheckout()}>
+                        <BsBagCheckFill />{" "}Finalizar compra
+                    </Link>    {/* link al componente Checkout  */}
+                </div>
+                <div className="boton"> 
+                    <button type="button" className="btn btn-danger" 
+                        onClick={() => clearCart()}>
+                        <BsFillCartFill />{" "}Vaciar carrito
+                    </button>
+                </div>
+            </div>
+        )
+    }
 
     const ListadoCarrito = () => {
 
@@ -34,12 +57,14 @@ const Cart = () => {
                                     <div className="col-5 text-start">{item.producto.descripcion}</div>
                                     <div className="col-2 text-end">{formatPriceNumber(item.producto.precio)}</div>
                                     <div className="col-2 text-end">{formatPriceNumber((item.cantidad * item.producto.precio))}</div>
-                                    <div className="col-1 my-1" > 
-                                        <button type="button" title="Eliminar Item"
-                                                className="btn btn-primary py-1"
-                                                onClick={() => removeFromCart(item.producto.codigo)}>
-                                            <MdDelete />
-                                        </button>
+                                    <div className="col-1" > 
+                                        <div className="btnEliminar">
+                                           <button type="button" title="Eliminar Item"
+                                                   className="btn btn-primary"
+                                                   onClick={() => removeFromCart(item.producto.codigo)}>
+                                                <MdDelete />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             ))
@@ -54,24 +79,18 @@ const Cart = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="btnVaciar py-5" > 
-                        <button type="button" className="btn btn-warning" 
-                            onClick={() => clearCart()}>
-                            <BsFillCartXFill />{" "}Vaciar carrito
-                        </button>
+                    <div className="botones py-4">
+                        <Botones/>
                     </div>
-                </div>
-
-                <div className="buyer container pt-5">
-                    <Formulario itemsCompra={contextCart} totalCompra={precioTotalCart()} />
                 </div>
             </div>
         )
     }
-
+    
     return (
-        <div className="cart" style={{ paddingTop: "30px" }}>
-            <div className="container-fluid my-5 p-5 border">
+        <div className="cart pt-5 px-3" >
+            {/* <div className="container-fluid my-5 p-5 border"> */}
+            <div className="container-fluid my-5 pt-5 border">
                 <h3 >
                     Cantidad total de productos:{` ${contextItemsCart()}`}
                 </h3>

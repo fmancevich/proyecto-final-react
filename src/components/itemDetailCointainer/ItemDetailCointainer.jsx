@@ -7,31 +7,12 @@ import Loader from '../loader/Loader';
 import { db } from '../../services/firebase'
 import { doc, getDoc } from "firebase/firestore"
 
-// const ItemDetailCointainer = ({ codigo }) => {
 const ItemDetailCointainer = ({ id }) => {
 
   // console.log('codigo: ', codigo);
   // console.log('id: ', id);
 
-  // const [productos, setProductos] = useState([]);
   const [producto, setProducto] = useState();
-
-  // const getProductoPorId = async () => {
-  //   try {
-  //     const response = await axios.get('/data/productos.json')
-  //     const productos = response.data.productos;
-  //     // console.log('esto es lo que hay en productos...');
-  //     // console.log(productos);
-
-  //     const productoEncontrado = productos.find(item => item.codigo === codigo)
-  //     // console.log(`productoEncontrado => ${JSON.stringify(productoEncontrado)}`)
-  //     setProducto(productoEncontrado)
-      
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
-
 
   const getProductoPorId = async () => {
 
@@ -53,9 +34,8 @@ const ItemDetailCointainer = ({ id }) => {
     getProductoPorId();      
   }, [id])  
 
-
   return (
-    <div className='itemDetailContainer container pt-5'>
+    <div className='itemDetailContainer container p-5'>
         {producto ? 
             <ItemDetail producto={producto} /> 
         : 

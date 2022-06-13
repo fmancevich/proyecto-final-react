@@ -7,7 +7,7 @@ import ProductDetail from '../views/ProductDetail'
 import ProductTipo from './../views/ProductTipo'
 import Nosotros from '../views/Nosotros'
 import Cart from '../components/cart/Cart'
-import Checkout from '../views/Checkout'
+import Checkout from '../components/cart/Checkout'
 import Error from '../views/Error'
 
 const Rutas = () => {

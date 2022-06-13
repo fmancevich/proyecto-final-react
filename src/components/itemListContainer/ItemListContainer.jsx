@@ -13,17 +13,6 @@ const ItemListContainer = ( {titulo, tipo} ) => {
 
   const [productos, setProductos] = useState([]);
 
-  // // obtiene el json de productos de public/data usando axios y try catch
-  // const getProductos = async () => {
-  //   try {
-  //     const response = await axios.get('/data/productos.json')
-  //     setProductos(response.data.productos)
-
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
   // obtiene la collection 'productos' del cloude firestore de Firebase
   const getProductos = async (tipo) => {
 
