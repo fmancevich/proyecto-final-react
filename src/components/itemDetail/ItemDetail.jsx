@@ -94,7 +94,8 @@ const ItemDetail = ( { producto } ) => {
           </div>
           {/* Body */}
           <div className="modal-body" >
-            <div className="row centrado d-flex align-items-center" >
+            {/* <div className="row centrado d-flex align-items-center" > */}
+            <div className="row d-flex justify-content-around" >
               {/* Imagen producto */}
               <div className="col-md-4">
                 <img width="200" height="200" src={imagen} />
