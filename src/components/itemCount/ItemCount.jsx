@@ -30,7 +30,7 @@ const ItemCount = ({ initial = 1, stock, onAdd }) => {
         <button type="button" className='buttonSign' disabled={cantidad <= 1} 
                 variant="text" onClick={decrement} 
                 style={{ background: "none", border: "none", cursor: "pointer" }}> - </button>
-        <p className='contador'>{cantidad}</p>
+        <p className='contador text-center'>{cantidad}</p>
         <button type="button" className='buttonSign' disabled={cantidad >= stock} 
                 variant="text" onClick={increment} 
                 style={{ background: "none", border: "none", cursor: "pointer" }}> + </button>

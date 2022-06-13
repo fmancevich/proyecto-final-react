@@ -83,7 +83,7 @@ const ItemDetail = ( { producto } ) => {
 
   return (
 
-      <div className='itemDetail container pt-5'>
+      <div className='itemDetail container justify-content-center pt-5'>
         <div className="content">
           {/* Header */}
           <div className="modal-header">
