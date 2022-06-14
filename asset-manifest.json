@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lighting-net/static/css/main.61a47d25.css",
+    "main.js": "/lighting-net/static/js/main.3fdf4e67.js",
+    "index.html": "/lighting-net/index.html",
+    "main.61a47d25.css.map": "/lighting-net/static/css/main.61a47d25.css.map",
+    "main.3fdf4e67.js.map": "/lighting-net/static/js/main.3fdf4e67.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61a47d25.css",
+    "static/js/main.3fdf4e67.js"
+  ]
+}
