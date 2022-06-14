@@ -97,11 +97,11 @@ const ItemDetail = ( { producto } ) => {
             {/* <div className="row centrado d-flex align-items-center" > */}
             <div className="row justify-content-around" >
               {/* Imagen producto */}
-              <div className="col-md-4">
+              <div className="col-md-4 text-center">
                 <img width="200" height="200" src={imagen} />
               </div>
               {/* Detalle producto */}
-              <div className="col-md-8 p-4">
+              <div className="col-md-8 p-4 text-center">
                 <p className="titulo fw-bold fs-4">{producto.titulo}</p> <br />
                 <p className="descripcion fw-bold fs-5">Código: {` ${producto.codigo}`}</p>
                 <p className="descripcion fs-5">{producto.descripcion}</p>
