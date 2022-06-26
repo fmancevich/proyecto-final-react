@@ -19,8 +19,7 @@ const Cart = () => {
     
     const Botones = () => {
         return (
-            // <div className="botones container d-flex justify-content-end gap-5 my-4">
-            <div className="botones container d-flex gap-5 my-4">
+            <div className="botones container d-flex gap-5 my-4 justify-content-center">
                 <div className="boton">
                     <Link to={`/checkout`} className="btn btn-success"
                         onClick={() => goToCheckout()}>
@@ -43,26 +42,28 @@ const Cart = () => {
             <div className='cart'>
                 <div className='listado'>
                     <div className="container-fluid pt-5">
-                        <div className="row tituloListado fw-bold pb-2" >
-                            <div className="col-1 text-center overflow-hidden">Cantidad</div>
-                            <div className="col-1 text-center overflow-hidden">Código</div>
-                            <div className="col-5 text-start">Descripcion</div>
-                            <div className="col-2 text-end">Precio Unitario</div>
-                            <div className="col-2 text-end">Total Producto</div>
+                        <div className="row tituloListado align-items-center fw-bold p-2 border bg-light" >
+                            <div className="col-6 col-md-1 text-center">Cantidad</div>
+                            <div className="col-6 col-md-1 text-center">Código</div>
+                            <div className="col-12 col-md-5 text-center">Descripcion</div>
+                            <div className="col-5 col-md-2 text-end">Precio Unitario</div>
+                            <div className="col-6 col-md-2 text-end">Total Producto</div>
                         </div>
                         <div>
                             {contextCart.map((item, index) => (
-                                <div className="row text-secondary align-items-center" key={index} >
-                                    <div className="col-1 text-center">{item.cantidad}</div>
-                                    <div className="col-1 text-center">{item.producto.codigo}</div>
-                                    <div className="col-5 text-start">{item.producto.descripcion}</div>
-                                    <div className="col-2 text-end">{formatPriceNumber(item.producto.precio)}</div>
-                                    <div className="col-2 text-end">{formatPriceNumber((item.cantidad * item.producto.precio))}</div>
-                                    <div className="col-1" > 
+                                <div key={index} className="row text-secondary align-items-center p-2 border" >
+                                    <div className="col-6 col-md-1 text-center">{item.cantidad}</div>
+                                    <div className="col-6 col-md-1 text-center">{item.producto.codigo}</div>
+                                    <div className="col-12 col-md-5 text-center">{item.producto.descripcion}</div>
+                                    <div className="col-5 col-md-2 text-end">{formatPriceNumber(item.producto.precio)}</div>
+                                    <div className="col-5 col-md-2 text-end">{formatPriceNumber((item.cantidad * item.producto.precio))}</div>
+                                    <div className="col-2 col-md-1" > 
                                         <div className="btnEliminar">
                                            <button type="button" title="Eliminar Item"
                                                    className="btn btn-primary"
-                                                   onClick={() => removeFromCart(item.producto.codigo)}>
+                                                   onClick={() => removeFromCart(item.producto.codigo)}
+                                                   style={{padding: "0px 4px 3px 4px",
+                                                           textAlign: "center", fontSize: "12px"}} >
                                                 <MdDelete />
                                             </button>
                                         </div>
@@ -71,16 +72,16 @@ const Cart = () => {
                             ))
                             }  
                         </div>
-                        <div className="row pieListado fw-bold pt-2" >
-                            <div className="col-9 text-end">
+                        <div className="row pieListado fw-bold align-items-center p-2 border bg-light" >
+                            <div className="col-6 col-md-9 text-end">
                                 TOTAL :
                             </div>
-                            <div className="col-2 text-end">
+                            <div className="col-4 col-md-2 text-end">
                                 {formatPriceNumber(precioTotalCart())}
                             </div>
                         </div>
                     </div>
-                    <div className="botones align-items-center py-4">
+                    <div className="botones py-4">
                         <Botones/>
                     </div>
                 </div>
