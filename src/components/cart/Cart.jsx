@@ -57,7 +57,7 @@ const Cart = () => {
                                     <div className="col-12 col-md-5 text-center">{item.producto.descripcion}</div>
                                     <div className="col-5 col-md-2 text-end">{formatPriceNumber(item.producto.precio)}</div>
                                     <div className="col-5 col-md-2 text-end">{formatPriceNumber((item.cantidad * item.producto.precio))}</div>
-                                    <div className="col-2 col-md-1" > 
+                                    <div className="col-2 col-md-1 text-center" > 
                                         <div className="btnEliminar">
                                            <button type="button" title="Eliminar Item"
                                                    className="btn btn-primary"
