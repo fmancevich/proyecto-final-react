@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/lighting-net/static/css/main.61a47d25.css",
-    "main.js": "/lighting-net/static/js/main.f63c2f67.js",
+    "main.css": "/lighting-net/static/css/main.afa0daae.css",
+    "main.js": "/lighting-net/static/js/main.4b58eb1e.js",
     "index.html": "/lighting-net/index.html",
-    "main.61a47d25.css.map": "/lighting-net/static/css/main.61a47d25.css.map",
-    "main.f63c2f67.js.map": "/lighting-net/static/js/main.f63c2f67.js.map"
+    "main.afa0daae.css.map": "/lighting-net/static/css/main.afa0daae.css.map",
+    "main.4b58eb1e.js.map": "/lighting-net/static/js/main.4b58eb1e.js.map"
   },
   "entrypoints": [
-    "static/css/main.61a47d25.css",
-    "static/js/main.f63c2f67.js"
+    "static/css/main.afa0daae.css",
+    "static/js/main.4b58eb1e.js"
   ]
 }
