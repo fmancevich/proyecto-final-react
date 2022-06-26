@@ -5,7 +5,7 @@ const ItemList = ( {productos, tipo} ) => {
   
   return (
     <div className="itemList">
-      <h3 className="subtitulo" align-center >
+      <h3 className="subtitulo" style={{ textAlign: "center" }} >
           {
             {
               'lampara': 'Lámparas',

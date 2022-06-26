@@ -19,6 +19,7 @@ const Rutas = () => {
                     <Route index element={<Home />} />  
                     {/* <Route path="/productos" element={<ProductList />} />   */}
                     <Route path="/lighting-net" element={<ProductTipo />} />  
+                    <Route path="/proyecto-final-react" element={<ProductTipo />} />  
                     <Route path="/productos" element={<ProductTipo />} />  
                     <Route path="/tipo/:tipo" element={<ProductTipo />} />  
                     {/* <Route path="/producto/:codigo" element={<ProductDetail />} />   */}
